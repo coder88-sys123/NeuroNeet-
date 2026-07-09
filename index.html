@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <!-- CSS Link -->
+    
+</head>
+<body>
+
+    <h1><B><U>My Website</U></B></h1>
+    <p>This is my first web</p>
+    <div class="container">
+    <input type="text" id="text1" placeholder="enter your name"/>
+    <br>
+    <input type="text" id="text2" placeholder="enter your class"/>
+    <br>
+    <input type="text" id="text3" placeholder="enter your roll no"/>
+    <br>
+    <input type="text" id="text4"
+    placeholder="enter your subject"/>
+     <br>
+    <input type="text" id="text5"
+    placeholder="enter your school name"/>
+    <br>
+    <button id="btn">click me</button>
+    </div>
+    <style>
+      body {
+        font-family:Arial,Halvetica,sans-serif;
+        display:grid;
+        background-color:skyblue;
+        color:black;
+        text-align:center;
+      }
+      h1 {
+        margin:none;
+        padding:auto;
+        text-align:center;
+      }
+      p {
+        margin:none;
+        padding:auto;
+        text-align:center;
+      }
+      .container {
+        display:grid;
+        padding:20px;
+        margin:auto;
+        width:85%;
+        
+      
+      }
+      #text1 {
+        padding:10px;
+        border:2px, solid black;
+        border-radius: 10px;
+        background-color:yellow;
+        color:red;
+      }
+      #text2 {
+        padding:10px;
+        border:2px, solid black;
+        border-radius: 10px;
+        background-color:yellow;
+        color:red;
+      }
+      #text3 {
+        padding:10px;
+        border:2px, solid black;
+        border-radius: 10px;
+        background-color:yellow;
+        color:red;
+      }
+      #text4 {
+        padding:10px;
+        border:2px, solid black;
+        border-radius: 10px;
+        background-color:yellow;
+        color:red;
+      }
+      #text5 {
+        padding:10px;
+        border:2px, solid black;
+        border-radius: 10px;
+        background-color:yellow;
+        color:red;
+      }
+      #btn {
+        padding:12px;
+        border:2px, solid black;
+        cursor:pointer;
+        border-radius: 10px;
+        background-color:red;
+        color:blue;
+      }
+      
+    </style>
+    <script>
+      document.getElementById("btn").addEventListener("click", () => {
+        let text1 = document.getElementById("text1").value;
+        document.body.style.textAlign = "center";
+        document.body.style.backgroundColor = "skyblue";
+        document.body.style.color = "red";
+        document.body.style.margin = "0";
+        document.body.style.borderTop = "10px solid green";
+        document.body.style.borderBottom = "10px solid green";
+        document.body.style.borderLeft = "10px solid orange";
+        document.body.style.borderRight = "10px solid orange";
+        document.body.style.boxSizing = "border-box";
+        document.body.style.height = "100vh"
+        let text2 = document.getElementById("text2").value;
+        let text3 = document.getElementById("text3").value;
+        let text4 = document.getElementById("text4").value;
+        let text5 = document.getElementById("text5").value;
+        document.body.innerHTML = `
+        <h1>${text5}</h1>
+        <h1>Name : ${text1}</h1>
+        <h1>Class : ${text2}</h1>
+        <h1>Roll No : ${text3}</h1>
+        <h1>Subject : ${text4}</h1>
+  `;
+})
+    </script>
+</body>
+</html>
+ll
