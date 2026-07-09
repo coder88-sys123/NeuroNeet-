@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>neuroNEET</title>
+    <style>
+      body {
+        font-family:Arial, sans-serif;
+        display:grid;
+        text-align:center;
+        
+        background-color:yellow;
+      }
+      #txt {
+        display:grid;
+        margin:auto;
+        padding:20px;
+        width:80%;
+        border:solid black 2px;
+        border-radius:20%;
+        background-color:skyblue;
+      }
+      #pass {
+        display:grid;
+        margin:auto;
+        padding:20px;
+        width:80%;
+        border:solid black 2px;
+        border-radius:20%;
+        background-color:skyblue;
+      }
+      #botn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  /* 3D effect */
+  box-shadow: 0 6px #2e7d32;
+  transition: all 0.1s ease;
+}
+
+.btn:hover {
+  background: #45a049;
+}
+
+.btn:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 #2e7d32;
+}
+      
+    </style>
+  </head>
+  <body>
+    <h1>welcome to login page</h1>
+    <br><br>
+    <input type="text" id="txt" placeholder="Enter your username" />
+    <br><br>
+    <input type="password" id="pass" placeholder="Enter your password" />
+    <br><br>
+    <button id="botn">login</button>
+    <script>
+      document.getElementById("botn").addEventListener("click", () => {
+        
+
+      let Username = document.getElementById("txt").value.trim()
+      let Password = document.getElementById("pass").value.trim()
+      if (Username === "" || Password === "") {
+        alert("please filled the given information..")
+        return;
+      }
+      localStorage.setItem("username", Username)
+      localStorage.setItem("password", Password)
+      if (Username === "anshu" && Password === "anshu") {
+        alert("login successful...")
+        window.location.href = "index.html"
+      } else {
+        alert("invalids username and password!")
+        return;
+      }
+      })
+    </script>
+  </body>
+</html>

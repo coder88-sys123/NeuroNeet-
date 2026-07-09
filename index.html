@@ -2,128 +2,308 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NeuroNEET | Train the Brain. Conquer NEET.</title>
 
-    <!-- CSS Link -->
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+    #btn1 {
+      display:grid;
+      padding:10px;
+      margin:0;
+      width:30%;
+      border-radius:20%;
+      background-color:blue;
+      }
+      #btn2 {
+      display:grid;
+      padding:10px;
+      margin:0;
+      width:30%;
+      border-radius:20%;
+      background-color:blue;
+      }
+  </style>
 </head>
 <body>
+    <button id="btn1">login</button>
+    <br>
+    <button id="btn2">signup</button>
+  <script>
+    document.getElementById("btn2").addEventListener("click", () => {
+      window.location.href="signup.html"
+    })
+  </script>
 
-    <h1><B><U>My Website</U></B></h1>
-    <p>This is my first web</p>
-    <div class="container">
-    <input type="text" id="text1" placeholder="enter your name"/>
-    <br>
-    <input type="text" id="text2" placeholder="enter your class"/>
-    <br>
-    <input type="text" id="text3" placeholder="enter your roll no"/>
-    <br>
-    <input type="text" id="text4"
-    placeholder="enter your subject"/>
-     <br>
-    <input type="text" id="text5"
-    placeholder="enter your school name"/>
-    <br>
-    <button id="btn">click me</button>
+<script>
+setInterval(() => {
+  document.getElementById("popup").style.display = "block";
+}, 5000);
+</script>
+    <!-- Splash Screen -->
+    <div id="splashScreen" class="splash-screen">
+        <i class="fa-solid fa-brain splash-icon"></i>
+        <h1>NeuroNEET</h1>
+        <p style="color: #b537f2; letter-spacing: 2px; font-size: 10px; margin-top: 10px;">TRAIN THE BRAIN. CONQUER NEET.</p>
+        <p style="color: #555; font-size: 10px; margin-top: 40px; letter-spacing: 1.5px;">BY RIDDHI DAS & ANSHU BHUIYA</p>
     </div>
-    <style>
-      body {
-        font-family:Arial,Halvetica,sans-serif;
-        display:grid;
-        background-color:skyblue;
-        color:black;
-        text-align:center;
-      }
-      h1 {
-        margin:none;
-        padding:auto;
-        text-align:center;
-      }
-      p {
-        margin:none;
-        padding:auto;
-        text-align:center;
-      }
-      .container {
-        display:grid;
-        padding:20px;
-        margin:auto;
-        width:85%;
+
+    <!-- Universal Top Bar -->
+    <div class="global-top-bar">
+        <button class="hamburger-btn" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+        <div class="mobile-brand"><i class="fa-solid fa-brain" style="color: #00f3ff;"></i> NeuroNEET</div>
+        <div style="width: 24px;"></div>
+    </div>
+
+    <!-- Collapsible Sidebar -->
+    <nav class="sidebar">
+        <div>
+            <div class="brand"><i class="fa-solid fa-brain"></i> NeuroNEET</div>
+            <div class="slogan" style="margin-bottom: 25px;">
+                Train the Brain. Conquer NEET.<br>
+                <span style="color: #00f3ff; font-weight: 600; font-size: 10px; margin-top: 5px; display: inline-block; letter-spacing: 1.5px;">BY RIDDHI DAS & ANSHU BHUIYA</span>
+            </div>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item active" onclick="switchTab('view-dashboard', this)"><i class="fa-solid fa-chart-line"></i> Dashboard</li>
+            <li class="nav-item" onclick="switchTab('view-biology', this)"><i class="fa-solid fa-dna"></i> Biology Master</li>
+            <li class="nav-item" onclick="switchTab('view-physics', this)"><i class="fa-solid fa-atom"></i> Physics Command</li>
+            <li class="nav-item" onclick="switchTab('view-chemistry', this)"><i class="fa-solid fa-flask"></i> Chemistry Hub</li>
+            <li class="nav-item" onclick="switchTab('view-mock', this)"><i class="fa-solid fa-file-signature"></i> Mock Engine</li>
+            <li class="nav-item" onclick="switchTab('view-pyq', this)"><i class="fa-solid fa-book-open"></i> PYQ Vault</li>
+        </ul>
+        <div class="dev-credit">Created & Developed by<br><span>RIDDHI DAS</span></div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
         
-      
-      }
-      #text1 {
-        padding:10px;
-        border:2px, solid black;
-        border-radius: 10px;
-        background-color:yellow;
-        color:red;
-      }
-      #text2 {
-        padding:10px;
-        border:2px, solid black;
-        border-radius: 10px;
-        background-color:yellow;
-        color:red;
-      }
-      #text3 {
-        padding:10px;
-        border:2px, solid black;
-        border-radius: 10px;
-        background-color:yellow;
-        color:red;
-      }
-      #text4 {
-        padding:10px;
-        border:2px, solid black;
-        border-radius: 10px;
-        background-color:yellow;
-        color:red;
-      }
-      #text5 {
-        padding:10px;
-        border:2px, solid black;
-        border-radius: 10px;
-        background-color:yellow;
-        color:red;
-      }
-      #btn {
-        padding:12px;
-        border:2px, solid black;
-        cursor:pointer;
-        border-radius: 10px;
-        background-color:red;
-        color:blue;
-      }
-      
-    </style>
-    <script>
-      document.getElementById("btn").addEventListener("click", () => {
-        let text1 = document.getElementById("text1").value;
-        document.body.style.textAlign = "center";
-        document.body.style.backgroundColor = "skyblue";
-        document.body.style.color = "red";
-        document.body.style.margin = "0";
-        document.body.style.borderTop = "10px solid green";
-        document.body.style.borderBottom = "10px solid green";
-        document.body.style.borderLeft = "10px solid orange";
-        document.body.style.borderRight = "10px solid orange";
-        document.body.style.boxSizing = "border-box";
-        document.body.style.height = "100vh"
-        let text2 = document.getElementById("text2").value;
-        let text3 = document.getElementById("text3").value;
-        let text4 = document.getElementById("text4").value;
-        let text5 = document.getElementById("text5").value;
-        document.body.innerHTML = `
-        <h1>${text5}</h1>
-        <h1>Name : ${text1}</h1>
-        <h1>Class : ${text2}</h1>
-        <h1>Roll No : ${text3}</h1>
-        <h1>Subject : ${text4}</h1>
-  `;
-})
-    </script>
+        <!-- DASHBOARD -->
+        <section id="view-dashboard" class="app-view active">
+            <header class="header">
+                <div>
+                    <h2>Command Center</h2>
+                    <div class="quote-box"><i class="fa-solid fa-quote-left"></i> "Genius is 1% inspiration and 99% perspiration."</div>
+                </div>
+                <button class="btn" style="border-color: #ff3366; color: #ff3366; font-size: 12px;" onclick="factoryResetApp()"><i class="fa-solid fa-power-off"></i> Master Reset</button>
+            </header>
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h3><i class="fa-solid fa-stopwatch"></i> Focus Timer</h3>
+                    <div class="timer-display" id="timer">00:00:00</div>
+                    <div class="timer-controls">
+                        <button class="btn" id="startBtn" onclick="startTimer()">Start</button>
+                        <button class="btn btn-purple" id="pauseBtn" onclick="pauseTimer()">Pause</button>
+                        <button class="btn" id="resetBtn" onclick="resetTimer()" style="border-color: #555; color: #888;">Reset</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-fire"></i> Consistency Tracker</h3>
+                    <div class="streak-flame" id="streakFlame"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                    <div class="streak-count" style="margin-bottom: 10px;">Streak: <span id="streakDays" style="color: #00f3ff;">0</span> Days</div>
+                    <div class="consistency-grid" id="consistencyGrid"></div>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-list-check"></i> Today's Targets</h3>
+                    <input type="text" id="goalInput" class="custom-input" placeholder="Add a goal... (Press Enter)" onkeypress="addGoal(event)">
+                    <ul class="goal-list" id="goalList"></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- BIOLOGY -->
+        <section id="view-biology" class="app-view">
+            <header class="header">
+                <div>
+                    <h2><i class="fa-solid fa-dna" style="color: #39ff14;"></i> Biology Master</h2>
+                    <div class="quote-box" style="margin-top: 5px;">"Repetition is the mother of learning."</div>
+                </div>
+            </header>
+            <div class="dashboard-grid">
+                <div class="card bio-card">
+                    <h3><i class="fa-solid fa-clone"></i> Active Recall</h3>
+                    <input type="text" id="fcQuestion" class="custom-input" placeholder="Enter Question...">
+                    <input type="text" id="fcAnswer" class="custom-input" placeholder="Enter Answer...">
+                    <button class="btn btn-bio" style="width: 100%; margin-bottom: 15px;" onclick="addFlashcard()">Create Flashcard</button>
+                    <div id="flashcardDeck" class="flashcard-deck"></div>
+                </div>
+                <div class="card bio-card" style="grid-column: span 2;">
+                    <h3><i class="fa-solid fa-image"></i> Diagram Vault</h3>
+                    <div class="diagram-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="diagram-box" onclick="toggleSpecificLabel('lbl1')">
+                            <i class="fa-solid fa-heart-pulse" style="font-size: 30px; margin-bottom: 10px; color: #ff3366;"></i><p>Human Heart</p>
+                            <div class="labels blur-effect" id="lbl1"><span>Aorta</span> | <span>SA Node</span></div>
+                        </div>
+                        <div class="diagram-box" onclick="toggleSpecificLabel('lbl2')">
+                            <i class="fa-solid fa-brain" style="font-size: 30px; margin-bottom: 10px; color: #ff99cc;"></i><p>Human Brain</p>
+                            <div class="labels blur-effect" id="lbl2"><span>Cerebrum</span> | <span>Hypothalamus</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bio-card" style="grid-column: span 3;">
+                    <h3><i class="fa-solid fa-list-check"></i> Complete NCERT Tracker</h3>
+                    <div class="tracker-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-height: 400px; overflow-y: auto; padding-right: 10px;">
+                        <div id="bio11Tracker"><h4 style="color: #39ff14; margin-bottom: 10px; border-bottom: 1px solid #333; padding-bottom: 5px;">Class 11</h4></div>
+                        <div id="bio12Tracker"><h4 style="color: #39ff14; margin-bottom: 10px; border-bottom: 1px solid #333; padding-bottom: 5px;">Class 12</h4></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHYSICS -->
+        <section id="view-physics" class="app-view">
+            <header class="header">
+                <div>
+                    <h2><i class="fa-solid fa-atom" style="color: #b537f2;"></i> Physics Command</h2>
+                    <div class="quote-box" style="margin-top: 5px; color: #b537f2;">"Nature is written in mathematical language."</div>
+                </div>
+            </header>
+            <div class="dashboard-grid">
+                <div class="card physics-card">
+                    <h3><i class="fa-solid fa-calculator"></i> Formula Hub</h3>
+                    <input type="text" id="formTitle" class="custom-input" placeholder="Concept (e.g. Escape Velocity)">
+                    <input type="text" id="formLatex" class="custom-input" placeholder="Formula (LaTeX format)">
+                    <button class="btn btn-physics" style="width: 100%; margin-bottom: 15px;" onclick="addFormula()">Save Formula</button>
+                    <div id="formulaContainer" class="accordion-container" style="max-height: 250px; overflow-y: auto;"></div>
+                </div>
+                <div class="card physics-card">
+                    <h3><i class="fa-solid fa-book-skull"></i> Mistake Notebook</h3>
+                    <div class="mistake-form">
+                        <select id="mistakeType" class="custom-input"><option value="Calculation">Calculation Error</option><option value="Concept">Concept Trap</option></select>
+                        <input type="text" id="mistakeDetails" class="custom-input" placeholder="E.g., Forgot conversion">
+                        <button class="btn btn-physics" style="width: 100%; margin-bottom: 10px;" onclick="logMistake()">Log Mistake</button>
+                    </div>
+                    <ul class="mistake-list" id="mistakeList"></ul>
+                </div>
+                <div class="card physics-card">
+                    <h3><i class="fa-solid fa-bolt"></i> Shortcut Tricks</h3>
+                    <input type="text" id="trickTitle" class="custom-input" placeholder="Trick Name">
+                    <input type="text" id="trickDesc" class="custom-input" placeholder="Description of the trick...">
+                    <button class="btn btn-physics" style="width: 100%; margin-bottom: 15px;" onclick="addTrick()">Save Trick</button>
+                    <div class="trick-slider" id="trickSlider"></div>
+                </div>
+                <div class="card physics-card" style="grid-column: span 3;">
+                    <h3><i class="fa-solid fa-book-journal-whills"></i> Complete Syllabus Tracker</h3>
+                    <div class="tracker-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-height: 400px; overflow-y: auto; padding-right: 10px;">
+                        <div id="phys11Tracker"><h4 style="color: #b537f2; margin-bottom: 10px; border-bottom: 1px solid #333; padding-bottom: 5px;">Class 11</h4></div>
+                        <div id="phys12Tracker"><h4 style="color: #b537f2; margin-bottom: 10px; border-bottom: 1px solid #333; padding-bottom: 5px;">Class 12</h4></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHEMISTRY -->
+        <section id="view-chemistry" class="app-view">
+            <header class="header">
+                <div>
+                    <h2><i class="fa-solid fa-flask" style="color: #00f3ff;"></i> Chemistry Hub</h2>
+                    <div class="quote-box" style="margin-top: 5px; color: #00f3ff;">"Every reaction is a step closer."</div>
+                </div>
+            </header>
+            <div class="dashboard-grid">
+                
+                <!-- DYNAMIC FLOW MAPS -->
+                <div class="card chem-card" style="grid-column: span 2;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #222; padding-bottom:10px; margin-bottom:15px;">
+                        <h3 style="margin:0; border:none; padding:0;"><i class="fa-solid fa-diagram-project"></i> Organic Flow-Maps</h3>
+                        <button class="btn btn-chem" style="padding: 5px 10px; font-size: 12px;" onclick="addFlowMap()">+ Add Map</button>
+                    </div>
+                    <div class="diagram-grid" id="flowMapContainer" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <!-- Custom Flow Maps injected here -->
+                    </div>
+                </div>
+
+                <!-- DYNAMIC REACTION QUIZ -->
+                <div class="card chem-card" style="grid-column: span 3;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #222; padding-bottom:10px; margin-bottom:15px;">
+                        <h3 style="margin:0; border:none; padding:0;"><i class="fa-solid fa-vial-circle-check"></i> Custom Reaction Quiz</h3>
+                    </div>
+                    <div style="display:flex; gap:10px; margin-bottom:15px;">
+                        <input type="text" id="quizQ" class="custom-input" style="margin:0;" placeholder="Reaction (e.g. A + B -> ?)">
+                        <input type="text" id="quizA" class="custom-input" style="margin:0;" placeholder="Correct Answer">
+                        <button class="btn btn-chem" onclick="addReactionQuiz()">Add Quiz</button>
+                    </div>
+                    <div class="quiz-grid" id="reactionQuizContainer" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+                        <!-- Quizzes injected here -->
+                    </div>
+                </div>
+
+                <div class="card chem-card" style="grid-column: span 3;">
+                    <h3><i class="fa-solid fa-book-journal-whills"></i> Complete Syllabus Tracker</h3>
+                    <div class="tracker-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-height: 400px; overflow-y: auto; padding-right: 10px;">
+                        <div id="chem11Tracker"><h4 style="color: #00f3ff; margin-bottom: 10px; border-bottom: 1px solid #333; padding-bottom: 5px;">Class 11</h4></div>
+                        <div id="chem12Tracker"><h4 style="color: #00f3ff; margin-bottom: 10px; border-bottom: 1px solid #333; padding-bottom: 5px;">Class 12</h4></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MOCK ENGINE -->
+        <section id="view-mock" class="app-view">
+            <header class="header">
+                <div><h2><i class="fa-solid fa-file-signature" style="color: #007bff;"></i> Mock Engine</h2></div>
+            </header>
+            <div class="dashboard-grid">
+                <div class="card mock-card" style="text-align: center;">
+                    <h3><i class="fa-solid fa-hourglass-half"></i> Live Exam Timer</h3>
+                    <div class="exam-timer-display" id="mockTimer">03:20:00</div>
+                    <div style="margin-top: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                        <button class="btn btn-mock" id="startMockBtn" onclick="startMockExam()">Start Exam</button>
+                        <button class="btn btn-mock" id="endMockBtn" onclick="stopMockExam()" style="display:none; border-color: #ff3366; color: #ff3366;">End Exam</button>
+                        <button class="btn btn-mock" id="viewResultBtn" onclick="viewMockResult()" style="background-color: var(--electric-blue); color: #fff;">View Result</button>
+                        <button class="btn" id="resetMockBtn" onclick="resetMockExam()" style="border-color: #555; color: #888;">Reset</button>
+                    </div>
+                </div>
+                <div class="card mock-card" style="grid-column: span 2;">
+                    <h3><i class="fa-solid fa-list-ol"></i> Digital OMR & Grading Sheet</h3>
+                    <div class="omr-container" id="omrSheet"></div>
+                    <div id="dynamicResultsDisplayContainer"></div> <!-- Results will attach here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- PYQ VAULT -->
+        <section id="view-pyq" class="app-view">
+            <header class="header" style="border-bottom:none; margin-bottom: 10px;">
+                <div><h2><i class="fa-solid fa-book-open" style="color: #ffcc00;"></i> PYQ Vault</h2></div>
+                <button class="btn" style="border-color:#ff3366; color:#ff3366;" onclick="resetPYQ()">Reset Vault</button>
+            </header>
+            
+            <!-- PYQ Custom Input Form -->
+            <div class="card pyq-card" style="margin-bottom:20px; border-left-color: #ffcc00;">
+                <div style="display:flex; gap:15px; margin-bottom:10px;">
+                    <select id="pyqYear" class="custom-input" style="margin:0;">
+                        <option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option>
+                    </select>
+                    <select id="pyqSub" class="custom-input" style="margin:0;">
+                        <option value="Physics">Physics</option><option value="Chemistry">Chemistry</option><option value="Biology">Biology</option>
+                    </select>
+                </div>
+                <input type="text" id="pyqQ" class="custom-input" placeholder="Type the question here...">
+                <input type="text" id="pyqA" class="custom-input" placeholder="Type the answer/solution here...">
+                <button class="btn" style="border-color:var(--neon-gold); color:var(--neon-gold); width:100%;" onclick="addPYQ()">Save to Vault</button>
+            </div>
+
+            <!-- PYQ Filters -->
+            <div class="filter-bar">
+                <select class="pyq-filter" id="filterYear">
+                    <option value="all">All Years</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option>
+                </select>
+                <select class="pyq-filter" id="filterSub">
+                    <option value="all">All Subjects</option><option value="Physics">Physics</option><option value="Chemistry">Chemistry</option><option value="Biology">Biology</option>
+                </select>
+                <button class="btn btn-pyq" onclick="applyPYQFilters()">Apply Filter</button>
+            </div>
+
+            <!-- PYQ Display Grid -->
+            <div class="dashboard-grid" id="pyqGrid" style="grid-template-columns: 1fr; gap: 15px;"></div>
+        </section>
+    </main>
 </body>
 </html>
-ll
