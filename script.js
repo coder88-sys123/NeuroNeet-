@@ -181,7 +181,7 @@ renderTracker(bio12, 'bio12Tracker', 'b12', 'var(--neon-green)');
 renderTracker(phys11, 'phys11Tracker', 'p11', 'var(--neon-purple)');
 renderTracker(phys12, 'phys12Tracker', 'p12', 'var(--neon-purple)');
 renderTracker(chem11, 'chem11Tracker', 'c11', 'var(--neon-cyan)');
-renderTracker(chem12, 'chem12Tracker', 'c12', 'var(--neon-cyan)');
+renderTracker(chem12, 'chem12Tracker', 'c12', 'var(--neon-cyan)')
 
 function saveTrackers() {
     let states = {};
